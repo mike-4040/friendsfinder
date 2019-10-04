@@ -15,6 +15,7 @@
 
     <title>Friends Finder</title>
   </head>
+
   <body>
     <div class="container">
       <h1>Please introduce yourself</h1>
@@ -42,7 +43,7 @@
               <input type="range" class="form-control-range" min="1" max="5" id="question01" />
               <div class="d-flex">
                 <small class="form-text text-muted">Stronly disagree</small>
-                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
@@ -50,7 +51,7 @@
               <input type="range" class="form-control-range" min="1" max="5" id="question02" />
               <div class="d-flex">
                 <small class="form-text text-muted">Stronly disagree</small>
-                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
@@ -58,7 +59,23 @@
               <input type="range" class="form-control-range" min="1" max="5" id="question03" />
               <div class="d-flex">
                 <small class="form-text text-muted">Stronly disagree</small>
-                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question04">Qestion 4</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question04" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question05">Qestion 5</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question04" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
           </div>
@@ -68,12 +85,12 @@
               <input type="range" class="form-control-range" min="1" max="5" id="question06" />
               <div class="d-flex">
                 <small class="form-text text-muted">Stronly disagree</small>
-                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
           </div>
         </div>
-        <button id="submin" type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
 
@@ -95,21 +112,14 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $('#submit').on('click', function(event) {
+      $(document).ready(listenForm);
+
+      function listenForm() {
+        $('#submit').on('click', getFormData);
+      }
+
+      function getFormData(event) {
         event.preventDefault();
-
-        console.log('Click');
-
-        function validateForm() {
-          let inputValid = true;
-
-          if ($('#name').val() === '') isValid = false;
-
-          if ($('#photoFile').val() === '' && $('#photoUrl').val()) isValid = false;
-
-          // return isValid;
-          return true;
-        }
 
         if (validateForm()) {
           const userData = {
@@ -128,9 +138,19 @@
               $('#question10').val()
             ]
           };
+          console.log(userData);
         }
-        console.log(userData);
-      });
+      }
+      function validateForm() {
+        let inputValid = true;
+
+        if ($('#name').val() === '') isValid = false;
+
+        if ($('#photoFile').val() === '' && $('#photoUrl').val()) isValid = false;
+
+        // return isValid;
+        return true;
+      }
     </script>
   </body>
 </html>
