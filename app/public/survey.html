@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Friends Finder</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please introduce yourself</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" class="form-control" aria-describedby="nameHelp" />
+          <small id="nameHelp" class="form-text text-muted">Please enter your real name.</small>
+        </div>
+        <div class="d-flex">
+          <div class="form-group">
+            <label for="photoFile">Upload your photo</label>
+            <input type="file" class="form-control-file" id="photoFile" />
+          </div>
+
+          <div class="form-group">
+            <label for="photoUrl">Provide a link to your photo</label>
+            <input type="url" class="form-control-url" id="photoUrl" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="question01">Qestion 1</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question01" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question02">Qestion 2</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question02" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question03">Qestion 3</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question03" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="question06">Qestion 6</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question06" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted ml-auto">Stronly disagree</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="submin" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('#submit').on('click', function(event) {
+        event.preventDefault();
+
+        console.log('Click');
+
+        function validateForm() {
+          let inputValid = true;
+
+          if ($('#name').val() === '') isValid = false;
+
+          if ($('#photoFile').val() === '' && $('#photoUrl').val()) isValid = false;
+
+          // return isValid;
+          return true;
+        }
+
+        if (validateForm()) {
+          const userData = {
+            name: $('#name').val(),
+            photo: $('#photoFile').val(),
+            scores: [
+              $('#question01').val(),
+              $('#question02').val(),
+              $('#question03').val(),
+              $('#question04').val(),
+              $('#question05').val(),
+              $('#question06').val(),
+              $('#question07').val(),
+              $('#question08').val(),
+              $('#question09').val(),
+              $('#question10').val()
+            ]
+          };
+        }
+        console.log(userData);
+      });
+    </script>
+  </body>
+</html>
