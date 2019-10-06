@@ -9,7 +9,7 @@ const users = [
     name: 'Switcher',
     photo:
       'https://pixabay.com/get/57e3dd4b4351ab14f1dc8460825668204022dfe054517241702c7dd3/lamb-1388937_640.png',
-    scores: [5, 2, 3, 1, 1, 3, 3, 3, 4, 2]
+    scores: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
   }
 ];
 

@@ -10,28 +10,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/f4e397b66e.js" crossorigin="anonymous"></script>
     <title>Friends Finder</title>
   </head>
-  <!--
-    Playing a game is fun only when you win.
-    Decisions that people make quickly are always wrong.
-    When people succeed, it's because of hard work.
-    Luck has nothing to do with success.
-    It's better for children to grow up in the countryside than in a big city.
-    Summer is the best season of the year.
-    Swimming in the ocean is better than swimming in a public pool.
-    It doesn't matter whether you enjoy your job or not as long as it's a well-paid job.
-    In the future all companies will be internet companies.
-    Pizza is the best food in the world.
-    Every kid should read at least one book every month.
-    Pupils should be allowed to eat ice-cream in school.
-    The night is better than the day.
-    Old people are funny.
-    Internet is better than TV.
-    Waiting is boring.
-    It's ok to lie.
-    Letters are better than e-mail.
-    Snow is better than sand. -->
 
   <body>
     <div class="container">
@@ -136,7 +117,37 @@
         </div>
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
       </form>
+      <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+              <h2>Name: <span id="match-name"></span></h2>
+              <img id="match-img" alt="" class="w-75 img-thumbnail" />
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends" target="_blank"
+            ><i class="fas fa-user-friends"></i> API Friends List</a
+          >
+          |
+          <a href="https://github.com/mike-4040/friendsfinder" target="_blank"
+            ><i class="fab fa-github"></i> GitHub Repo</a
+          >
+        </p>
+      </div>
+    </footer>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -166,7 +177,7 @@
         if (!validateForm()) {
           return;
         }
-        const userData = {
+        const userInfo = {
           name: $('#name').val(),
           photo: $('#photoUrl').val(),
           scores: [
@@ -182,9 +193,11 @@
             $('#question10').val()
           ]
         };
-        console.log(userData);
-        $.post('/api/friends', userData, function(data) {
-          console.log(`Respond from the Server: ${data}`);
+        $.post('/api/friends', userInfo, function(data) {
+          console.log(`Respond from the Server: ${data.name}, ${data.photo}`);
+          $('#match-name').text(data.name);
+          $('#match-img').attr('src', data.photo);
+          $('#results-modal').modal('toggle');
         });
       }
       validateForm = () => $('#name').val() && $('#photoUrl').val();

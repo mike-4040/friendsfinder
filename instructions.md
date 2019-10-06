@@ -106,9 +106,12 @@ Having an active and healthy commit history on GitHub is important for your futu
 + read friends.js
 + find the best friend.
 + pass best frind to the client
-- display the best frined
++ display the best frined
++ homepage
 - readme
 - review design
+- update portfolio
+- submin assignment 
 
 ### Reminder: Submission on BCS
 
