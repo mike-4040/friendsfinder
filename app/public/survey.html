@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
     <title>Friends Finder</title>
   </head>
+  <!--
+    Playing a game is fun only when you win.
+    Decisions that people make quickly are always wrong.
+    When people succeed, it's because of hard work.
+    Luck has nothing to do with success.
+    It's better for children to grow up in the countryside than in a big city.
+    Summer is the best season of the year.
+    Swimming in the ocean is better than swimming in a public pool.
+    It doesn't matter whether you enjoy your job or not as long as it's a well-paid job.
+    In the future all companies will be internet companies.
+    Pizza is the best food in the world.
+    Every kid should read at least one book every month.
+    Pupils should be allowed to eat ice-cream in school.
+    The night is better than the day.
+    Old people are funny.
+    Internet is better than TV.
+    Waiting is boring.
+    It's ok to lie.
+    Letters are better than e-mail.
+    Snow is better than sand. -->
 
   <body>
     <div class="container">
@@ -25,66 +42,93 @@
           <input id="name" type="text" class="form-control" aria-describedby="nameHelp" />
           <small id="nameHelp" class="form-text text-muted">Please enter your real name.</small>
         </div>
-        <div class="d-flex">
-          <div class="form-group">
-            <label for="photoFile">Upload your photo</label>
-            <input type="file" class="form-control-file" id="photoFile" />
-          </div>
-
-          <div class="form-group">
-            <label for="photoUrl">Provide a link to your photo</label>
-            <input type="url" class="form-control-url" id="photoUrl" />
-          </div>
+        <div class="form-group">
+          <label for="photoUrl">Link to your photo</label>
+          <input id="photoUrl" type="url" class="form-control-url" />
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col-md-6">
             <div class="form-group">
-              <label for="question01">Qestion 1</label>
+              <label for="question01">Playing a game is fun only when you win.</label>
               <input type="range" class="form-control-range" min="1" max="5" id="question01" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
-              <label for="question02">Qestion 2</label>
+              <label for="question02">Luck has nothing to do with success.</label>
               <input type="range" class="form-control-range" min="1" max="5" id="question02" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
-              <label for="question03">Qestion 3</label>
+              <label for="question03">Summer is the best season of the year.</label>
               <input type="range" class="form-control-range" min="1" max="5" id="question03" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
-              <label for="question04">Qestion 4</label>
+              <label for="question04"
+                >In the future all companies will be internet companies.</label
+              >
               <input type="range" class="form-control-range" min="1" max="5" id="question04" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
             <div class="form-group">
-              <label for="question05">Qestion 5</label>
-              <input type="range" class="form-control-range" min="1" max="5" id="question04" />
+              <label for="question05">Pizza is the best food in the world.</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question05" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-6">
             <div class="form-group">
-              <label for="question06">Qestion 6</label>
+              <label for="question06">Pupils should be allowed to eat ice-cream in school.</label>
               <input type="range" class="form-control-range" min="1" max="5" id="question06" />
               <div class="d-flex">
-                <small class="form-text text-muted">Stronly disagree</small>
+                <small class="form-text text-muted">Disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question07">The night is better than the day.</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question07" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question08">Internet is better than TV.</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question08" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question09">It's ok to lie.</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question09" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Disagree</small>
+                <small class="form-text text-muted ml-auto">Agree</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="question10">Snow is better than sand.</label>
+              <input type="range" class="form-control-range" min="1" max="5" id="question10" />
+              <div class="d-flex">
+                <small class="form-text text-muted">Disagree</small>
                 <small class="form-text text-muted ml-auto">Agree</small>
               </div>
             </div>
@@ -94,8 +138,6 @@
       </form>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -121,36 +163,28 @@
       function getFormData(event) {
         event.preventDefault();
 
-        if (validateForm()) {
-          const userData = {
-            name: $('#name').val(),
-            photo: $('#photoFile').val(),
-            scores: [
-              $('#question01').val(),
-              $('#question02').val(),
-              $('#question03').val(),
-              $('#question04').val(),
-              $('#question05').val(),
-              $('#question06').val(),
-              $('#question07').val(),
-              $('#question08').val(),
-              $('#question09').val(),
-              $('#question10').val()
-            ]
-          };
-          console.log(userData);
+        if (!validateForm()) {
+          return;
         }
+        const userData = {
+          name: $('#name').val(),
+          photo: $('#photoUrl').val(),
+          scores: [
+            $('#question01').val(),
+            $('#question02').val(),
+            $('#question03').val(),
+            $('#question04').val(),
+            $('#question05').val(),
+            $('#question06').val(),
+            $('#question07').val(),
+            $('#question08').val(),
+            $('#question09').val(),
+            $('#question10').val()
+          ]
+        };
+        console.log(userData);
       }
-      function validateForm() {
-        let inputValid = true;
-
-        if ($('#name').val() === '') isValid = false;
-
-        if ($('#photoFile').val() === '' && $('#photoUrl').val()) isValid = false;
-
-        // return isValid;
-        return true;
-      }
+      validateForm = () => $('#name').val() && $('#photoUrl').val();
     </script>
   </body>
 </html>
