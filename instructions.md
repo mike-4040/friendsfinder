@@ -101,6 +101,15 @@ Having an active and healthy commit history on GitHub is important for your futu
 7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
    * The modal should display both the name and picture of the closest match.
 
+8. Gameplan
++ implement user data transfer to backend.
++ read friends.js
++ find the best friend.
++ pass best frind to the client
+- display the best frined
+- readme
+- review design
+
 ### Reminder: Submission on BCS
 
 * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!

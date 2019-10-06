@@ -183,6 +183,9 @@
           ]
         };
         console.log(userData);
+        $.post('/api/friends', userData, function(data) {
+          console.log(`Respond from the Server: ${data}`);
+        });
       }
       validateForm = () => $('#name').val() && $('#photoUrl').val();
     </script>
