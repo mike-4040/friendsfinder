@@ -1,0 +1,24 @@
+{
+  "name": "friendsfinder",
+  "version": "1.0.0",
+  "description": "UCSD Homework Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-4040/friendsfinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mike-4040/friendsfinder/issues"
+  },
+  "homepage": "https://github.com/mike-4040/friendsfinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
