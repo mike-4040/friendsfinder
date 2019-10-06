@@ -18,7 +18,7 @@ jQuery - to handle user input, API requests, and rendering results.
 
 **Backend**
 
-FF has written on `JavaScript` and runs on `node.js`.
+FF is written on `JavaScript` and runs on `node.js`.
 FF uses `express` package to run a webserver and handle API requests.
 
 To simplify development and maintenance application split into several modules:
