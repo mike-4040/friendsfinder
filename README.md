@@ -1,8 +1,6 @@
 # Friendsfinder (FF)
 UCSD Homework Project
 
-Link to open application: https://whispering-inlet-78054.herokuapp.com
-
 ## Functionality
 FF collect a User name,link to photo and ask a few personality questions.
 Then FF compares User answers with all users from our extensive database and displays the closest match using our proprietary algorithm (pattent pending).
