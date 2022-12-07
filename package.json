@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/mike-4040/friendsfinder#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
